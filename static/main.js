@@ -155,7 +155,7 @@
 		    var input = $(this);
 		    input.addClass("placeholder");
 		    input.val(input.attr("placeholder"));
- 
+
 		    $(this).focus(function() {
 		      	var input = $(this);
 		      	if (input.val() == input.attr("placeholder")) {
@@ -170,69 +170,8 @@
 			        input.addClass("placeholder");
 			        input.val(input.attr("placeholder"));
 		      	}
-		    })
+		    });
 		});
-
-		// placeholder snippet for older browsers [end]
-
-		// custom validation methods [start]
-
-		$.validator.addMethod(
-		    "notplaceholder",
-		    function(value, element){
-		        return ($(element).attr("placeholder") != value);
-			},
-			"Please enter a value"
-		);
-
-		// custom validation methods [end]
-
-		// jquery validate initialisation
-
-		$("#contact-form").validate({
-		    rules: {
-			    subject : {
-			        required    : true,
-			        notplaceholder  : true
-		      	},
-		      	name : {
-			        required   : true,
-			        notplaceholder  : true
-		      	},
-		      	email : {
-			        required    : true,
-			        email       : true,
-			        notplaceholder  : true
-		      },
-		     	message : {
-			        required : true,
-			        notplaceholder  : true
-		      	}
-		    },
-		    errorPlacement: function(error, element) {
-		      	$(element).addClass("error");
-		    },
-		    submitHandler: function(form){
-
-		    	$("#send").attr("value", "Sending...");
-		    	$("#send").addClass("sending");
-
-		        var hasError = false;
-		        if(!hasError) {
-		            var formInput = $(form).serialize();
-		              	$.post($(form).attr("action"),formInput, function(data){
-		              		$("#send").attr("value", "Send Message");
-		              		$("#send").removeClass("sending");
-		                	$(".contact-notification").addClass("success");
-		              	});
-		          	}
-		        else {
-		            alert("Sent error!");
-		        }
-		        return false;
-		    }
-		});
-
-	});
+    });
 
 })(jQuery);
