@@ -1,3 +1,6 @@
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
 /*  ==========================================================
 Template name 	: Katya - Responsive Creative CV Template
 Author  		: balapa
@@ -115,7 +118,7 @@ body {
 }
 
 #profile .expand {
-	display: none;		
+	display: none;
 }
 
 #profile .summary {
@@ -1470,7 +1473,7 @@ body {
 	.masonry-item .overlay h4 {
 		padding: 0 20px !important;
 		font-size: 16px;
-	}	
+	}
 
 	#features > div,
 	#blog-post,
