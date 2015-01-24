@@ -436,6 +436,8 @@
             margin-bottom: 40px;
             padding-bottom: 30px;
             border-bottom: 1px solid #ddd;
+            width: 390px;
+            position: fixed;
         }
 
         #skills h2,
