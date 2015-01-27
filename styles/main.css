@@ -322,7 +322,7 @@ body {
     width: 60px;
     right: 38px !important;
     top: 30px !important;
-    background: url("img/close.svg") no-repeat rgba(255,255,255,.5);
+    background: url("images/close.svg") no-repeat rgba(255,255,255,.5);
     opacity: .4;
     z-index: 999;
 }
@@ -915,13 +915,13 @@ body {
 
 .error {
     border-color: #e74c3c !important;
-    background: url("img/attention.svg") no-repeat;
+    background: url("images/attention.svg") no-repeat;
     background-size: 18px;
     background-position: calc(100% - 15px) 15px;
 }
 
 .contact-notification {
-    background: url("img/check.svg") no-repeat;
+    background: url("images/check.svg") no-repeat;
     background-size: 22px;
     background-position: calc(100% - 15px) 15px;
     position: relative;
@@ -994,7 +994,7 @@ body {
     width: 50px;
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
-    background: url("img/envelope.svg") no-repeat center center;
+    background: url("images/envelope.svg") no-repeat center center;
     background-size: cover;
     border: none;
     height: 50px;
