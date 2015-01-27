@@ -95,4 +95,10 @@ app.controller('resumeController', function ($scope) {
     };
 
     $scope.skillsets = $scope.timeline[0].content;
+
+
+    GITHUB_URL = 'https://api.github.com/users/kxxoling/repos?sort=updated&callback=' + 'showGitHub';
+
+    showGitHub = function(){
+    };
 });
