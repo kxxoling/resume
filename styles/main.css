@@ -318,7 +318,7 @@ body {
     width: 60px;
     right: 38px !important;
     top: 30px !important;
-    background: url("images/close.svg") no-repeat rgba(255,255,255,.5);
+    background: url("../images/close.svg") no-repeat rgba(255,255,255,.5);
     opacity: .4;
     z-index: 999;
 }
