@@ -114,7 +114,8 @@ app.controller('resumeController', function ($scope) {
         $scope.skillsets = el.skillsets
     };
     $scope.jump = function(href){
-        window.location = '/#/' + href;
+        l = window.location.href;
+        window.location = l.split('#')[0] + '#/' + href;
     };
 });
 
