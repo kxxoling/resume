@@ -85,7 +85,7 @@
                                 <h2 class="title">Work&Edu Experience</h2>
                                 <!-- begin #timeline -->
                                 <div id="timeline">
-                                    <div class="timeline-item" ng-repeat="data in timeline">
+                                    <div class="timeline-item" ng-repeat="data in timeline" ng-mouseover="chooseTime(data)">
                                         <div class="briefcase fa fa-briefcase"></div>
                                         <div class="job">
                                             <h2 class="job-title" ng-if="data.company">{{ data.company }}<span>- {{ data.title }}</span></h2>

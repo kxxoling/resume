@@ -95,6 +95,9 @@ app.controller('resumeController', function ($scope) {
         mail: 'kxxoling@gmail.com'
     };
 
-    skill = $scope.timeline[1];
-    $scope.skillsets = skill.skillsets
+    $scope.skillsets = $scope.timeline[1].skillsets;
+
+    $scope.chooseTime = function(el){
+        $scope.skillsets = el.skillsets
+    };
 });
