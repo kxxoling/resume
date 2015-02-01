@@ -39,65 +39,6 @@
       		});
 		});
 
-	    //	Features animation function
-
-	    $("#profile .expand, #profile .expand-profile").on("click", function() {
-			$("#profile").toggleClass("full-height").removeClass("profile");
-			$("#profile .expand").hide();
-		});
-
-		$("#profile .expand-profile").on("click", function() {
-			$("#profile").addClass("profile");
-			$("#profile .expand").show();
-		});
-
-		$("#resume .expand").on("click", function() {
-			$("#resume").toggleClass("full").toggleClass("full-height");
-			$("#blog, #portfolio, #contact").toggleClass("zero").toggleClass("zero-height");
-			$("#profile").toggleClass("profile-off");
-			$(this).hide();
-		});
-
-		$("#resume .close-icon").on("click", function() {
-			$("#resume .expand").show();
-			$(this).hide();
-		});
-
-		$("#blog .expand").on("click", function() {
-			$("#blog").toggleClass("full").toggleClass("full-height");
-			$("#resume, #portfolio, #contact").toggleClass("zero").toggleClass("zero-height");
-			$("#profile").toggleClass("profile-off");
-			$(this).hide();
-		});
-
-		$("#blog .close-icon").on("click", function() {
-			$("#blog .expand").show();
-			$(this).hide();
-		});
-
-		$("#portfolio .expand").on("click", function() {
-			$("#portfolio").toggleClass("full").toggleClass("full-height");
-			$("#resume, #blog, #contact").toggleClass("zero").toggleClass("zero-height");
-			$("#profile").toggleClass("profile-off");
-			$(this).hide();
-		});
-
-		$("#portfolio .close-icon").on("click", function() {
-			$("#portfolio .expand").show();
-			$(this).hide();
-		});
-
-		$("#contact .expand").on("click", function() {
-			$("#contact").toggleClass("full").toggleClass("full-height");
-			$("#resume, #blog, #portfolio").toggleClass("zero").toggleClass("zero-height");
-			$("#profile").toggleClass("profile-off");
-			$(this).hide();
-		});
-
-		$("#contact .close-icon").on("click", function() {
-			$("#contact .expand").show();
-			$(this).hide();
-		});
 
 		//	Skill bars function
 
