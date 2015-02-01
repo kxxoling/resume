@@ -102,9 +102,9 @@
                                 <div id="skills">
                                     <h2 class="title">My skills</h2>
                                     <div class="skill-item" ng-repeat="skill in skillsets">
-                                        <h3 class="skill-title">{{ skill.name }}</h3>
-                                        <div class="skill-bar-bg" data-percent="{{skill.percent}}">
-                                            <div class="skill-bar" ng-style="width: {{ skill.percent }}%;"></div>
+                                        <h3 class="skill-title">{{ skill[0] }}</h3>
+                                        <div class="skill-bar-bg" data-percent="{{ skill[1] }}">
+                                            <div class="skill-bar" ng-attr-style="width: {{ skill[1] }}%;"></div>
                                         </div>
                                     </div>
                                 </div>
