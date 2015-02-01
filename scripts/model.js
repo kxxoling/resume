@@ -109,6 +109,8 @@ app.controller('resumeController', function ($scope) {
     $scope.chooseTime = function(el){
         $scope.skillsets = el.skillsets
     };
-
+    $scope.jump = function(href){
+        window.location = '/#/' + href;
+    };
 });
 
