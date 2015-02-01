@@ -21,7 +21,8 @@
     9.	#blog-post
     10.	#portfolio-case
     11.	custom
-    12.	responsive
+    12. expand
+    13.	responsive
 
     ==========================================================	*/
 
@@ -117,10 +118,6 @@ body {
     position: relative;
 }
 
-#profile .expand {
-    display: none;
-}
-
 #profile .summary {
     padding: 30px 0;
     border-bottom: 1px solid #ddd;
@@ -188,7 +185,6 @@ body {
     padding: 15px 25px;
     display: inline-block;
     color: #bbb;
-    font-family: 'Montserrat', serif;
     border: 1px solid #bbb;
     transition: .2s all ease;
     border-radius: 3px;
@@ -231,66 +227,13 @@ body {
 }
 
 #features > div {
-    height: 100%;
     transition: .3s all ease;
     overflow-y: hidden;
     overflow-x: hidden;
     cursor: pointer;
     position: relative;
     box-sizing: border-box;
-    width: 25%;
     will-change: width;
-}
-
-#features .expand {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    z-index: 99;
-    overflow-y: hidden;
-}
-
-#features .add-expand {
-    left: 0;
-}
-
-.expand h1 {
-    font-family: 'Montserrat', serif;
-    text-transform: uppercase;
-    color: white;
-    margin-top: 50px;
-    text-align: center;
-    overflow-x: hidden;
-}
-
-.expand .detail {
-    font-family: 'Droid Serif', serif;
-    text-align: center;
-    color: white;
-    position: relative;
-    top: -5px;
-    opacity: 0;
-    transition: .3s all ease;
-    overflow-x: hidden;
-}
-
-.expand:hover .detail {
-    top: 0;
-    opacity: 1;
-}
-
-.expand .icon {
-    position: absolute;
-    bottom: 50px;
-    font-size: 50px;
-    margin-left: -25px;
-    color: rgba(255,255,255,.5);
-    transition: .2s color ease;
-}
-
-.expand:hover .icon {
-    color: rgba(255,255,255,1);
 }
 
 .main-content {
@@ -307,10 +250,8 @@ body {
 }
 
 .title {
-    font-family: 'Montserrat', serif;
     position: relative;
     text-transform: uppercase;
-    margin-bottom: 30px;
 }
 
 .close-icon {
@@ -322,7 +263,7 @@ body {
     width: 60px;
     right: 38px !important;
     top: 30px !important;
-    background: url("images/close.svg") no-repeat rgba(255,255,255,.5);
+    background: url("../images/close.svg") no-repeat rgba(255,255,255,.5);
     opacity: .4;
     z-index: 999;
 }
@@ -373,7 +314,7 @@ body {
 }
 
 #resume .col-md-6 > .title {
-    margin-bottom: 20px !important;
+    margin-bottom: 30px;
 }
 
 .briefcase {
@@ -393,24 +334,23 @@ body {
 }
 
 .job-title {
-    font-family: 'Montserrat', serif;
     font-size: 18px;
     color: #3A4145;
     text-transform: uppercase;
+    padding-top: 4px;
 }
 
 .job-title span {
-    font-family: 'Montserrat', Georgia, serif !important;
     font-size: 16px !important;
     text-transform: capitalize !important;
 }
 
 .year {
-    font-family: 'Montserrat', serif;
     color: #999;
     font-size: 14px;
     margin-top: 5px;
     display: block;
+    font-weight: 200;
 }
 
 .job-detail {
@@ -454,7 +394,6 @@ body {
 }
 
 .skill-title {
-    font-family: 'Montserrat', serif;
     color: #bbb;
     font-size: 16px;
     margin-bottom: 5px;
@@ -494,7 +433,6 @@ body {
 
 .testi-profile .detail h3 {
     color: #3A4145;
-    font-family: 'Montserrat', serif;
     margin-bottom: 3px;
 }
 
@@ -562,7 +500,6 @@ body {
 }
 
 .blog-item .overlay h1 {
-    font-family: 'Montserrat', serif;
     text-transform: uppercase;
     padding: 15px;
     border: 1px solid white;
@@ -602,14 +539,12 @@ body {
 
 .blog-item .date {
     float: left;
-    font-family: 'Montserrat', serif;
     padding: 8px 10px;
     border-right: 1px solid #ddd;
 }
 
 .blog-item .like {
     float: right;
-    font-family: 'Montserrat', serif;
     padding: 8px 10px;
     border-left: 1px solid #ddd;
 }
@@ -660,7 +595,6 @@ body {
     padding: 15px 60px;
     text-transform: capitalize;
     font-size: 17px;
-    font-family: 'Montserrat', serif;
     color: #666;
 }
 
@@ -683,7 +617,6 @@ body {
 }
 
 #filter li a {
-    font-family: 'Montserrat', serif;
     margin-right: 8px;
     font-size: 16px;
     padding: 7.5px 15px;
@@ -731,7 +664,6 @@ body {
 }
 
 .masonry-item .overlay h1 {
-    font-family: 'Montserrat', serif;
     text-transform: uppercase;
     padding-bottom: 15px;
     border-bottom: 1px solid white;
@@ -745,7 +677,6 @@ body {
 }
 
 .masonry-item .overlay h4 {
-    font-family: 'Montserrat', serif;
     line-height: 2em;
     color: rgba(255,255,255,.9);
     transition: .3s 0s all ease;
@@ -786,7 +717,6 @@ body {
 
 #portfolio-case .review {
     padding: 15px 30px;
-    font-family: 'Montserrat', serif;
     font-size: 22px;
     margin-bottom: 30px;
     color: #999;
@@ -810,7 +740,6 @@ body {
     background: #eaeaea;
     border: none;
     color: #666;
-    font-family: 'Montserrat', serif;
 }
 
 .btn:hover {
@@ -896,7 +825,6 @@ body {
     background: #eaeaea;
     border: none;
     color: #666;
-    font-family: 'Montserrat', serif;
 }
 
 #contact-form input[type="submit"]:hover,
@@ -925,7 +853,6 @@ body {
     background-size: 22px;
     background-position: calc(100% - 15px) 15px;
     position: relative;
-    font-family: 'Montserrat', serif !important;
     top: 15px;
     transition: .3s all ease;
     opacity: 0;
@@ -1008,7 +935,6 @@ body {
 .subscribe-notification {
     display: block;
     text-align: center;
-    font-family: 'Montserrat', serif;
     margin-top: 13px;
     position: relative;
     transition: .3s all ease;
@@ -1070,7 +996,6 @@ body {
 }
 
 .quotes {
-    font-family: 'Montserrat', serif;
     font-size: 1.8rem;
     line-height: 1.5em;
     color: #777;
@@ -1086,7 +1011,6 @@ body {
 
 .quoter {
     color: #666;
-    font-family: 'Montserrat', serif;
     margin-top: 20px;
     padding-top: 13px;
     border-top: 1px solid #dcdcdc;
@@ -1104,7 +1028,6 @@ body {
 .interaction > div {
     display: inline-block;
     color: #666;
-    font-family: 'Montserrat', serif;
     font-size: 16px;
     cursor: pointer;
     margin-right: 10px;
@@ -1163,7 +1086,6 @@ body {
 }
 
 .reader-name {
-    font-family: 'Montserrat', serif;
     margin-bottom: 15px
 }
 
@@ -1176,7 +1098,6 @@ body {
 }
 
 .comment-interaction > span {
-    font-family: 'Montserrat', Georgia, serif !important;
 }
 
 .comment-interaction > span:first-child {
@@ -1201,11 +1122,74 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: rgba(0,0,0,.2); 
+    background: rgba(0,0,0,.2);
 }
 
+
 /*  ----------------------------------------------------------
-    [12. Responsive]
+    [12. Expand]
+    ----------------------------------------------------------  */
+#features > div{
+    height: 100%;
+    width: 100%;
+}
+.expand-container {
+    width: 33.3%;
+    height: 100%;
+    float: left;
+}
+.expand-container div.expand{
+}
+
+.expand-container:first-child{
+    background: rgba(255, 255, 255,.1);
+}
+.expand-container:2th-child{
+    background: rgba(255, 255, 255,.2);
+}
+.expand-container:last-child{
+    background: rgba(255, 255, 255,.3);
+}
+.expand{
+    z-index: 99;
+    overflow: hidden;
+}
+
+.expand h1 {
+    color: white;
+    margin-top: 50px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.expand .detail {
+    text-align: center;
+    color: white;
+    transition: .3s all ease;
+    overflow-x: hidden;
+    visibility: hidden;
+}
+
+.expand:hover .detail {
+    top: 0;
+    opacity: 1;
+}
+
+.expand:hover .icon {
+    color: rgba(255,255,255,1);
+}
+
+.expand .icon {
+    color: rgba(255,255,255,.5);
+    font-size: 40px;
+    transition: .2s color ease;
+    text-align: center;
+    display: block;
+}
+
+
+/*  ----------------------------------------------------------
+    [13. Responsive]
     ----------------------------------------------------------  */
 
 /*	Min width : 768px */
@@ -1227,7 +1211,7 @@ body {
          */
     }
 
-    #features > div {
+    #features > div > div {
         float: left;
         padding: 30px;
     }
@@ -1307,27 +1291,6 @@ body {
         transition: .3s .3s all ease;
     }
 
-    #profile .expand {
-        position: absolute;
-        top: 0;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        display: block;
-        cursor: pointer;
-        z-index: 99;
-    }
-
-    #profile .expand-profile {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        display: block;
-        cursor: pointer;
-        z-index: 99;
-    }
-
     .profile {
         overflow-y: hidden !important;
     }
@@ -1335,11 +1298,6 @@ body {
     .profile-off {
         opacity: 0;
         pointer-events: none;
-    }
-
-    #profile .expand h1,
-    #profile .expand .fa {
-        color: #666;
     }
 
     #blog-post,
@@ -1365,7 +1323,7 @@ body {
         will-change: width;
     }
 
-    #features > div {
+    #features > div > div {
         width: 100%;
         height: 25%;
     }
@@ -1373,29 +1331,6 @@ body {
     #blog-post,
     #portfolio-case {
         width: 100% !important;
-    }
-
-    .expand .detail {
-        display: none !important;
-    }
-
-    .expand h1 {
-        position: absolute;
-        text-align: left;
-        top: 50%;
-        right: 0;
-        left: 25px;
-        bottom: 0;
-        margin-top: -20px !important;
-    }
-
-    .expand .icon {
-        bottom: 0 !important;
-        right: 25px;
-        font-size: 40px;
-        top: 50%;
-        margin-top: -20px;	
-        display: inline-block;
     }
 
     .main-content {
@@ -1429,7 +1364,7 @@ body {
         bottom: 40px;
     }
 
-    #features > div,
+    #features > div > div,
     #blog-post,
     #portfolio-case {
         padding: 30px;
@@ -1459,6 +1394,7 @@ body {
 
 /*	Max width : 480px */
 
+
 @media (max-width: 480px) {
 
     .blog-item .overlay,
@@ -1480,7 +1416,7 @@ body {
         font-size: 16px;
     }
 
-    #features > div,
+    #features > div > div,
     #blog-post,
     #portfolio-case  {
         padding: 15px;
@@ -1507,4 +1443,12 @@ body {
         font-size: 10px;
     }
 
+}
+
+/* 临时样式 */
+#features .working{
+    text-align: center;
+    font-size: 70px;
+    color: #fff;
+    margin-top: 30%;
 }
