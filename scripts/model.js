@@ -15,7 +15,11 @@ app.controller('resumeController', function ($scope) {
         company: '北京天使汇',
         title: '前后端开发工程师',
         text: '涉及项目几乎所有方面的开发；带过新人、做过演讲。总的来说，得到了相对全面的成长。',
-        skillsets:[]
+        skillsets: [
+            ['HTML&CSS', 40],
+            ['Javascript', 70],
+            ['Python', 80]
+        ]
     }, {
         startTime: '2014-06',
         stopTime: '2014-07',
