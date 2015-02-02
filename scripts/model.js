@@ -1,10 +1,10 @@
 var app= angular.module('app', ['ngRoute'])
 
 app.config(['$routeProvider', function($routeProvider){
-    $routeProvider.when('/resume', {templateUrl: '_resume.html', controller: 'resumeController'}).
-                   when('/github', {templateUrl: '_github.html', controller: 'resumeController'}).
-                   when('/contact', {templateUrl: '_contact.html', controller: 'resumeController'}).
-                   when('/expand', {templateUrl: '_expand.html', controller: 'resumeController'}).
+    $routeProvider.when('/resume', {templateUrl: 'resume.html', controller: 'resumeController'}).
+                   when('/github', {templateUrl: 'github.html', controller: 'resumeController'}).
+                   when('/contact', {templateUrl: 'contact.html', controller: 'resumeController'}).
+                   when('/expand', {templateUrl: 'expand.html', controller: 'resumeController'}).
                    otherwise({redirectTo: '/expand'});
 }]);
 
