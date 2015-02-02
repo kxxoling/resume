@@ -315,6 +315,7 @@ body {
 
 #resume .col-md-6 > .title {
     margin-bottom: 30px;
+    cursor: pointer;
 }
 
 .briefcase {

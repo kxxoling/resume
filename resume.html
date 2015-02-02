@@ -9,18 +9,20 @@
         <h1 class="title">My Resume</h1>
         <div class="row">
             <div class="col-md-6">
-                <h2 class="title">Work&Edu Experience</h2>
+                <h2 class="title" ng-click="toggleTimeline()" ng-if="showWorkExp">Work&Edu Experience</h2>
+                <h2 class="title" ng-click="toggleTimeline()" ng-if="!showWorkExp">Project Experience</h2>
                 <!-- begin #timeline -->
                 <div id="timeline">
                     <div class="timeline-item" ng-repeat="data in timeline" ng-mouseover="chooseTime(data)">
                         <div class="briefcase fa fa-briefcase"></div>
                         <div class="job">
-                            <h2 class="job-title" ng-if="data.company">{{ data.company }}
+                            <h2 class="job-title" ng-if="!showWorkExp">{{ data.title }}</h2>
+                            <h2 class="job-title" ng-if="showWorkExp">{{ data.company }}
                                 <span>-</span>
                                 <span>{{ data.title }}</span>
                             </h2>
                             <h2 class="job-title" ng-if="data.school">{{ data.school }}<span>- {{ data.major }}</span></h2>
-                            <h3 class="year"><span>{{ data.startTime }}</span> - <span>{{ data.stopTime || "至今" }}</span></h3>
+                            <h3 class="year" ng-if="data.startTime || data.stopTime"><span>{{ data.startTime }}</span> - <span>{{ data.stopTime || "至今" }}</span></h3>
                             <div class="job-detail">{{ data.text }}</div>
                         </div>
                     </div>

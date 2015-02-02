@@ -53,35 +53,26 @@ app.controller('resumeController', function ($scope) {
 
     projectExp = [{
         title: '天使汇主站',
-        text: '',
+        text: '涉及主站几乎所有页面，使用过 Redis、MongoDB、Tornado、jQuery（及插件）、Avalon、CoffeeScript 等技术。',
         skillsets: [
-            'HTML&CSS', 40,
-            'Javascript', 70,
-            'Python', 80
+            ['HTML&CSS', 40],
+            ['Javascript', 70],
+            ['Python', 80]
         ]
     }, {
         title: '天使汇统一登录系统',
-        text: '',
+        text: '使用到的新技术有 RPC、JSONP 等。',
         skillsets: [
-            ['HTML&CSS', 40],
-            ['Javascript', 70],
-            ['Python', 80]
-        ]
-    }, {
-        title: '天使汇自动补全系统',
-        text: '',
-        skillsets: [
-            ['HTML&CSS', 40],
-            ['Javascript', 70],
-            ['Python', 80]
+            ['Python', 70]
         ]
     }, {
         title: '车辆追踪系统',
-        text: '',
+        text: '基于 ArcGIS 开发了 VB 和 .NET 版本的车辆实时追踪系统。',
         skillsets: [
             ['HTML&CSS', 40],
             ['Javascript', 70],
-            ['Python', 80]
+            ['VB', 50],
+            ['C#', 60]
         ]
     }, {
         title: '各语言（微）博客',
@@ -94,6 +85,15 @@ app.controller('resumeController', function ($scope) {
     }];
 
     $scope.timeline = workExp;
+    $scope.showWorkExp = true
+    $scope.toggleTimeline = function(){
+        if ($scope.showWorkExp === true){
+            $scope.timeline = projectExp;
+        } else {
+            $scope.timeline = workExp;
+        }
+        $scope.showWorkExp = !$scope.showWorkExp
+    };
 
     $scope.profile = {
         name: '王然',
