@@ -13,3 +13,11 @@
 今后博客会使用 [GitBook](http://blog.windrunner.info/) 更新，
 另外，我正在更新一本叫做[《Python One to Million》](http://py.windrunner.info/)的书，
 希望能够成为 Python 开发的 Index。
+
+
+## 关于简历
+
+这个简历的设计来自 [balapa.com](http://balapa.com/katya/#top-resumea)，
+对网页代码稍作整理后，正在使用努力地使用 Angular 重构中！（初次学习使用 Angular，还请多多指教）
+
+预览链接：[GitHub Pages](http://gh.windrunner.info/resume/)
