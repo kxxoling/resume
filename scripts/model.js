@@ -1,10 +1,10 @@
 var app= angular.module('app', ['ngRoute'])
 
 app.config(['$routeProvider', function($routeProvider){
-    $routeProvider.when('/resume', {templateUrl: '_resume.html', controller: 'resumeController'}).
-                   when('/github', {templateUrl: '_github.html', controller: 'resumeController'}).
-                   when('/contact', {templateUrl: '_contact.html', controller: 'resumeController'}).
-                   when('/expand', {templateUrl: '_expand.html', controller: 'resumeController'}).
+    $routeProvider.when('/resume', {templateUrl: 'resume.html', controller: 'resumeController'}).
+                   when('/github', {templateUrl: 'github.html', controller: 'resumeController'}).
+                   when('/contact', {templateUrl: 'contact.html', controller: 'resumeController'}).
+                   when('/expand', {templateUrl: 'expand.html', controller: 'resumeController'}).
                    otherwise({redirectTo: '/expand'});
 }]);
 
@@ -15,7 +15,11 @@ app.controller('resumeController', function ($scope) {
         company: '北京天使汇',
         title: '前后端开发工程师',
         text: '涉及项目几乎所有方面的开发；带过新人、做过演讲。总的来说，得到了相对全面的成长。',
-        skillsets:[]
+        skillsets: [
+            ['HTML&CSS', 40],
+            ['Javascript', 70],
+            ['Python', 80]
+        ]
     }, {
         startTime: '2014-06',
         stopTime: '2014-07',
@@ -49,35 +53,26 @@ app.controller('resumeController', function ($scope) {
 
     projectExp = [{
         title: '天使汇主站',
-        text: '',
+        text: '涉及主站几乎所有页面，使用过 Redis、MongoDB、Tornado、jQuery（及插件）、Avalon、CoffeeScript 等技术。',
         skillsets: [
-            'HTML&CSS', 40,
-            'Javascript', 70,
-            'Python', 80
+            ['HTML&CSS', 40],
+            ['Javascript', 70],
+            ['Python', 80]
         ]
     }, {
         title: '天使汇统一登录系统',
-        text: '',
+        text: '使用到的新技术有 RPC、JSONP 等。',
         skillsets: [
-            ['HTML&CSS', 40],
-            ['Javascript', 70],
-            ['Python', 80]
-        ]
-    }, {
-        title: '天使汇自动补全系统',
-        text: '',
-        skillsets: [
-            ['HTML&CSS', 40],
-            ['Javascript', 70],
-            ['Python', 80]
+            ['Python', 70]
         ]
     }, {
         title: '车辆追踪系统',
-        text: '',
+        text: '基于 ArcGIS 开发了 VB 和 .NET 版本的车辆实时追踪系统。',
         skillsets: [
             ['HTML&CSS', 40],
             ['Javascript', 70],
-            ['Python', 80]
+            ['VB', 50],
+            ['C#', 60]
         ]
     }, {
         title: '各语言（微）博客',
@@ -90,6 +85,15 @@ app.controller('resumeController', function ($scope) {
     }];
 
     $scope.timeline = workExp;
+    $scope.showWorkExp = true
+    $scope.toggleTimeline = function(){
+        if ($scope.showWorkExp === true){
+            $scope.timeline = projectExp;
+        } else {
+            $scope.timeline = workExp;
+        }
+        $scope.showWorkExp = !$scope.showWorkExp
+    };
 
     $scope.profile = {
         name: '王然',
@@ -114,6 +118,10 @@ app.controller('resumeController', function ($scope) {
     GITHUB_URL = 'https://api.github.com/users/kxxoling/repos?sort=updated&callback=' + 'showGitHub';
 
     showGitHub = function(){
+
+    $scope.jump = function(href){
+        l = window.location.href;
+        window.location = l.split('#')[0] + '#/' + href;
     };
 });
 

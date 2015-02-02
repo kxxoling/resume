@@ -1,0 +1,47 @@
+<div id="resume" class="full full-height">
+    <div id="top-resume" class="expand add-expand" style="display: none;" ng-controller="resumeController">
+        <h1>Resume</h1>
+        <div class="detail">View My Resume</div>
+        <div class="icon icon-left fa fa-file-o"></div>
+    </div>
+    <div class="main-content">
+        <a href="#/expand" class="close-icon expand" style=""></a>
+        <h1 class="title">My Resume</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="title" ng-click="toggleTimeline()" ng-if="showWorkExp">Work&Edu Experience</h2>
+                <h2 class="title" ng-click="toggleTimeline()" ng-if="!showWorkExp">Project Experience</h2>
+                <!-- begin #timeline -->
+                <div id="timeline">
+                    <div class="timeline-item" ng-repeat="data in timeline" ng-mouseover="chooseTime(data)">
+                        <div class="briefcase fa fa-briefcase"></div>
+                        <div class="job">
+                            <h2 class="job-title" ng-if="!showWorkExp">{{ data.title }}</h2>
+                            <h2 class="job-title" ng-if="showWorkExp">{{ data.company }}
+                                <span>-</span>
+                                <span>{{ data.title }}</span>
+                            </h2>
+                            <h2 class="job-title" ng-if="data.school">{{ data.school }}<span>- {{ data.major }}</span></h2>
+                            <h3 class="year" ng-if="data.startTime || data.stopTime"><span>{{ data.startTime }}</span> - <span>{{ data.stopTime || "至今" }}</span></h3>
+                            <div class="job-detail">{{ data.text }}</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end #timeline -->
+            </div>
+            <div class="col-md-5">
+                <!-- begin #skills -->
+                <div id="skills">
+                    <h2 class="title">My skills</h2>
+                    <div class="skill-item" ng-repeat="skill in skillsets">
+                        <h3 class="skill-title">{{ skill[0] }}</h3>
+                        <div class="skill-bar-bg" data-percent="{{ skill[1] }}">
+                            <div class="skill-bar" ng-attr-style="width: {{ skill[1] }}%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end #skills -->
+            </div>
+        </div>
+    </div>
+</div>

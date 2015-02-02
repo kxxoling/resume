@@ -29,10 +29,6 @@
         <div id="main-container" ng-controller="resumeController">
             <!-- begin #profile -->
             <div id="profile" class="profile profile-off">
-                <div id="top-profile" class="expand add-expand">
-                    <h1>Profile</h1>
-                    <img class="small-image icon icon-left fa" ng-src="{{ profile.avatar }}" alt="Mobile Profile Picture">
-                </div>
                 <div class="main-content-profile">
                     <div class="summary">
                         <img class="big-image" ng-src="{{ profile.avatar }}" alt="Profile Picture">
@@ -68,14 +64,7 @@
             <!-- end #profile -->
 
             <!-- begin #features -->
-            <div id="features">
-
-                <!-- begin #resume -->
-                <div id="resume" class="full full-height">
-                    <div ng-view></div>
-                </div>
-                <!-- end #resume -->
-
+            <div id="features" ng-view>
             </div>
             <!-- end #features -->
 
