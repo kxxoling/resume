@@ -17,11 +17,11 @@
                         <div class="briefcase fa fa-briefcase"></div>
                         <div class="job">
                             <h2 class="job-title" ng-if="!showWorkExp">{{ data.title }}</h2>
-                            <h2 class="job-title" ng-if="showWorkExp">{{ data.company }}
+                            <h2 class="job-title" ng-if="showWorkExp && data.company">{{ data.company }}
                                 <span>-</span>
                                 <span>{{ data.title }}</span>
                             </h2>
-                            <h2 class="job-title" ng-if="data.school">{{ data.school }}<span>- {{ data.major }}</span></h2>
+                            <h2 class="job-title" ng-if="showWorkExp && data.school">{{ data.school }}<span>- {{ data.major }}</span></h2>
                             <h3 class="year" ng-if="data.startTime || data.stopTime"><span>{{ data.startTime }}</span> - <span>{{ data.stopTime || "至今" }}</span></h3>
                             <div class="job-detail">{{ data.text }}</div>
                         </div>
