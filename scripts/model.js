@@ -8,7 +8,7 @@ app.config(['$routeProvider', function($routeProvider){
                    otherwise({redirectTo: '/expand'});
 }]);
 
-app.controller('resumeController', function ($scope) {
+app.controller('resumeController', function ($scope, $http) {
 
     workExp = [{
         startTime: '2014-07',
@@ -108,14 +108,27 @@ app.controller('resumeController', function ($scope) {
         mail: 'kxxoling@gmail.com'
     };
 
+
     $scope.skillsets = $scope.timeline[1].skillsets;
 
     $scope.chooseTime = function(el){
         $scope.skillsets = el.skillsets
     };
+
+    $scope.projectList = [];
+
+    $scope.showGitHub = function(){
+        GITHUB_URL = 'https://api.github.com/users/kxxoling/repos?sort=updated';
+        $http.get(GITHUB_URL).then(function(result){
+            $scope.projectList = result.data;
+            console.log( result.data)
+        });
+    };
+
     $scope.jump = function(href){
         l = window.location.href;
         window.location = l.split('#')[0] + '#/' + href;
     };
+    $scope.showGitHub();
 });
 
