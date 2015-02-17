@@ -241,6 +241,7 @@ body {
     position: relative;
     left: -50px;
     transition: .3s 0s all ease;
+    width: 100%;
 }
 
 .full .main-content {
