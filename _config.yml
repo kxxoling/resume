@@ -1,0 +1,6 @@
+baseurl: /r/
+host: gh.windrunner.info
+permalink: /:year/:month/:day/:title
+markdown: rdiscount
+highlighter: pygments
+date_format: "ordinal"
