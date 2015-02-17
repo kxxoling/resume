@@ -117,11 +117,10 @@ app.controller('resumeController', function ($scope, $http) {
 
     $scope.projectList = [];
 
-    $scope.showGitHub = function(){
+    getGitHub = function(){
         GITHUB_URL = 'https://api.github.com/users/kxxoling/repos?sort=updated';
         $http.get(GITHUB_URL).then(function(result){
             $scope.projectList = result.data;
-            console.log( result.data)
         });
     };
 
@@ -129,6 +128,7 @@ app.controller('resumeController', function ($scope, $http) {
         l = window.location.href;
         window.location = l.split('#')[0] + '#/' + href;
     };
-    $scope.showGitHub();
+
+    getGitHub();
 });
 
