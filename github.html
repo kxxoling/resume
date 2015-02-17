@@ -1,19 +1,22 @@
 <div id="resume" class="full full-height">
-    <div ng-controller="resumeController">
-        <div class="project clear" ng-repeat="project in projectList">
-            <div class="floatLeft">
-                <img class="icon" src="">
-            </div>
-            <div class="content floatLeft">
-                <div class="">
-                    <a class="name" target="_blank" ng-href="{{ project.html_url }}">{{ project.name }}</a>
-                    <a class="ref" target="_blank" ng-if="project.homepage" ng-href="{{ project.homepage }}"></a>
+    <div class="main-content">
+        <a href="#/expand" class="close-icon expand" style=""></a>
+        <div ng-controller="resumeController">
+            <div class="project clear" ng-repeat="project in projectList">
+                <div class="floatLeft">
+                    <img class="icon" src="">
                 </div>
-                <div class="desc">{{ project.description }}</div>
-            </div>
-            <div class="tag">
-                <div class="lang">{{ project.language }}</div>
-                <div class="update">{{ project.pushed_at }}</div>
+                <div class="content floatLeft">
+                    <div class="">
+                        <a class="name" target="_blank" ng-href="{{ project.html_url }}">{{ project.name }}</a>
+                        <a class="ref" target="_blank" ng-if="project.homepage" ng-href="{{ project.homepage }}"></a>
+                    </div>
+                    <div class="desc">{{ project.description }}</div>
+                </div>
+                <div class="tag">
+                    <div class="lang">{{ project.language }}</div>
+                    <div class="update">{{ project.pushed_at }}</div>
+                </div>
             </div>
         </div>
     </div>

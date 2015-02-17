@@ -4,6 +4,7 @@
 
 .project{
     height: 80px;
+    width: 750px;
     color: #777;
 }
 
@@ -13,6 +14,8 @@
 
 .content {
     margin-left: 10px;
+    margin-right: 10px;
+    width: 500px;
 }
 
 .content .name{
