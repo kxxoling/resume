@@ -1,1 +1,20 @@
-<div class="working" onclick="javascript:window.location='http://github.com/kxxoling';">施工中……</div>
+<div id="resume" class="full full-height">
+    <div ng-controller="resumeController">
+        <div class="project" ng-repeat="project in projectList">
+            <div class="floatLeft">
+                <img class="icon" src="">
+            </div>
+            <div class="content">
+                <div class="floatLeft">
+                    <a class="name" ng-href="project.html_url">{{ project.name }}</a>
+                    <a class="ref" ng-if="project.homepage" ng-href="project.homepage"></a>
+                </div>
+                <div class="desc">{{ project.description }}</div>
+            </div>
+            <div class="tag">
+                <div class="lang">{{ project.language }}</div>
+                <div class="update">{{ project.pushed_at }}</div>
+            </div>
+        </div>
+    </div>
+</div>
