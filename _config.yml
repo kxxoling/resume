@@ -1,4 +1,4 @@
-baseurl: /r/
+baseurl: /resume/
 host: gh.windrunner.info
 permalink: /:year/:month/:day/:title
 markdown: rdiscount
