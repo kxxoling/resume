@@ -1,0 +1,42 @@
+.clear{
+    clear: both;
+}
+
+.project{
+    height: 80px;
+    color: #777;
+}
+
+.floatLeft {
+    float: left;
+}
+
+.content {
+    margin-left: 10px;
+}
+
+.content .name{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.content .desc, .tag .update{
+    margin-top: 6px;
+}
+
+.content .ref:before {
+    content: "√";
+}
+
+.icon {
+    width: 60px;
+    height: 60px;
+}
+
+a.name {
+ color: ##00f;
+}
+
+.tag {
+    float: right;
+}
