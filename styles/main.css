@@ -176,11 +176,6 @@ body {
     padding-right: 7px;
 }
 
-.button {
-    margin: 30px;
-    text-align: center;
-}
-
 .download {
     padding: 15px 25px;
     display: inline-block;
@@ -1453,4 +1448,62 @@ body {
     font-size: 70px;
     color: #fff;
     padding-top: 30%;
+}
+
+.clear {
+    clear: both;
+}
+
+.block {
+    display: block;
+}
+
+.contact-root {
+    padding-top: 0;
+}
+
+textarea.mail, input.mail {
+    font-size: 18px;
+    line-height: 30px;
+    width: 300px;
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 500px;
+    border: #ccc 1px solid;
+}
+
+#mail-title {
+    height: 40px;
+    margin-bottom: 20px;
+}
+
+#mail-content {
+    margin-bottom: 10px;
+    height: 270px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.button {
+    width: 130px;
+    height: 40px;
+    line-height: 40px;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.button:hover {
+    text-decoration: none;
+}
+
+#cancel {
+    color: #333;
+    background: #f3f3f3;
+}
+
+#submit-mail {
+    color: #fff;
+    background: #00f;
 }

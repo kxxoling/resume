@@ -130,4 +130,15 @@ app.controller('resumeController', function ($scope, $http) {
     };
 
     getGitHub();
+
+    MAIL_TITLE = '我是一个有意思的人，希望和你一起做一番有意思的事！';
+
+    $scope.mail = {
+        title: MAIL_TITLE,
+        content: '',
+    }
+    $scope.initMail = function(){
+        $scope.mail.title = MAIL_TITLE,
+        $scope.mail.content = '';
+    }
 });
