@@ -118,4 +118,3 @@ app.controller('resumeController', function ($scope) {
         window.location = l.split('#')[0] + '#/' + href;
     };
 });
-
