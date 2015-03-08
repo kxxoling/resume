@@ -1,11 +1,7 @@
-.coderwall-root {
-    font-family: Helvetica;
-    margin-left: auto;
-    margin-right: auto;
-    clear: both;
-    float: left;
-    padding: 5px;
-    text-align: center;
+#feature .coderwall-div {
+    margin-top: 30px;
+    margin-left: 30px;
+    padding: 0;
 }
 
 .coderwall-root.vertical {
