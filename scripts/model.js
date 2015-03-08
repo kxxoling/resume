@@ -131,4 +131,3 @@ app.controller('resumeController', function ($scope, $http) {
 
     getGitHub();
 });
-
