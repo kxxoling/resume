@@ -1182,6 +1182,8 @@ body {
     transition: .2s color ease;
     text-align: center;
     display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
