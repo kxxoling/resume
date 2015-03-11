@@ -20,11 +20,19 @@
     <body data-gclp-initialized="true" data-gistbox-initialized="true" ng-cloak>
 
         <!-- begin .preloader -->
-        <div class="preloader" style="display: none;">
-            <div class="spinner"></div>
+        <div id="loader-wrapper">
+            <div class="preloader loading">
+                <span class="slice"></span>
+                <span class="slice"></span>
+                <span class="slice"></span>
+                <span class="slice"></span>
+                <span class="slice"></span>
+                <span class="slice"></span>
+            </div>
+
+            <div class="loader-section section-left"></div>
+            <div class="loader-section section-right"></div>
         </div>
-        <div class="preloader-left slide-left"></div>
-        <div class="preloader-right slide-right"></div>
         <!-- end preloader -->
 
         <!-- begin #main-container -->
@@ -50,16 +58,6 @@
                     <div class="social-container">
                         <!-- Google +1 按钮位置 -->
                         <div class="g-plusone" data-annotation="inline" data-width="300"></div>
-                        <!-- 需要紧邻最后一个 +1 按钮 -->
-                        <script type="text/javascript">
-                          window.___gcfg = {lang: 'zh-CN'};
-
-                          (function() {
-                            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-                            po.src = 'https://apis.google.com/js/platform.js';
-                            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-                          })();
-                        </script>
                     </div>
                 </div>
             </div>
