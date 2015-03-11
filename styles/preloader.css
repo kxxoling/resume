@@ -6,6 +6,10 @@
     z-index: 10000;
 }
 
+.loaded#loader-wrapper .preloader {
+    display: none;
+}
+
 #loader-wrapper .loader-section {
     position: fixed;
     top: 0;
