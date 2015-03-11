@@ -187,26 +187,9 @@ body {
 }
 
 .social-container {
-    text-align: center;
-    width: 100%;
-}
-
-.social {
-    list-style: none;
-    display: inline-block;
-}
-
-.social li {
-    display: inline-block;
-}
-
-.social li a {
-    font-size: 22px;
-    margin: 0 4px;
-}
-
-.social li a:hover {
-    text-decoration: none;
+    position: fixed;
+    left: 50px;
+    bottom: 10px;
 }
 
 /*  ----------------------------------------------------------
