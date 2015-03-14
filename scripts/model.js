@@ -8,7 +8,11 @@ app.config(['$routeProvider', function($routeProvider){
                    otherwise({redirectTo: '/expand'});
 }]);
 
-app.controller('resumeController', function ($scope, $http) {
+app.controller('resumeController', function ($scope, $location, $http) {
+    $scope.url = $location.$$url;
+    $scope.$on('$routeChangeStart', function(next, current) {
+        $scope.url = $location.$$url;
+    });
 
     workExp = [{
         startTime: '2014-07',

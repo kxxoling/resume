@@ -181,30 +181,6 @@ body {
     text-transform: uppercase;
 }
 
-.close-icon {
-    display: none;
-    position: fixed !important;
-    cursor: pointer;
-    transition: .2s all ease;
-    height: 60px;
-    width: 60px;
-    right: 38px !important;
-    top: 30px !important;
-    background: url("../images/close.svg") no-repeat rgba(255,255,255,.5);
-    opacity: .4;
-    z-index: 999;
-}
-
-.close-icon:hover {
-    opacity: .6;
-}
-
-.full .close-icon,
-.full-blog .close-icon,
-.full-portfolio .close-icon,
-#profile .full-height .close-icon {
-    display: block !important;
-}
 
 /*  ----------------------------------------------------------
     [5. #resume]
@@ -658,3 +634,26 @@ textarea.mail, input.mail {
     outline: none;
 }
 
+.close-icon {
+    position: fixed !important;
+    right: 38px !important;
+    top: 30px !important;
+    display: block;
+    height: 60px;
+    width: 60px;
+    overflow: hidden;
+    cursor: pointer;
+    background: url("../images/close.svg") no-repeat rgba(255,255,255,.5);
+    opacity: .4;
+    text-decoration: none;
+    transition: .2s all ease;
+    z-index: 10;
+}
+
+.close-icon:hover {
+    opacity: .6;
+}
+
+.invisible {
+    display: none;
+}
