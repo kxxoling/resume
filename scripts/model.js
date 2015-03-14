@@ -109,6 +109,7 @@ app.controller('resumeController', function ($scope, $location, $http) {
         bitbucket: 'windrunner1992',
         zhihu: 'kxxoling',
         v2ex: '',
+        mobile: '13311561757',
         mail: 'kxxoling@gmail.com'
     };
 
