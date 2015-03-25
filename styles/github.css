@@ -12,6 +12,10 @@
     float: left;
 }
 
+.floatRight {
+    float: right;
+}
+
 .content {
     margin-left: 10px;
     margin-right: 10px;

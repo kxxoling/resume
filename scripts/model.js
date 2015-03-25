@@ -8,10 +8,15 @@ app.config(['$routeProvider', function($routeProvider){
                    otherwise({redirectTo: '/expand'});
 }]);
 
-app.controller('resumeController', function ($scope, $http) {
+app.controller('resumeController', function ($scope, $location, $http) {
+    $scope.url = $location.$$url;
+    $scope.$on('$routeChangeStart', function(next, current) {
+        $scope.url = $location.$$url;
+    });
 
     workExp = [{
         startTime: '2014-07',
+        stopTime: '2015-03',
         company: '北京天使汇',
         title: '前后端开发工程师',
         text: '涉及项目几乎所有方面的开发；带过新人、做过演讲。总的来说，得到了相对全面的成长。',
@@ -105,6 +110,7 @@ app.controller('resumeController', function ($scope, $http) {
         bitbucket: 'windrunner1992',
         zhihu: 'kxxoling',
         v2ex: '',
+        mobile: '13311561757',
         mail: 'kxxoling@gmail.com'
     };
 
@@ -130,5 +136,15 @@ app.controller('resumeController', function ($scope, $http) {
     };
 
     getGitHub();
-});
 
+    MAIL_TITLE = '我是一个有意思的人，希望和你一起做一番有意思的事！';
+
+    $scope.mail = {
+        title: MAIL_TITLE,
+        content: '',
+    }
+    $scope.initMail = function(){
+        $scope.mail.title = MAIL_TITLE,
+        $scope.mail.content = '';
+    }
+});

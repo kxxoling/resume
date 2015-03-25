@@ -1,1 +1,26 @@
-<div class="working" onclick="javascript:window.location ='mailto:kxxoling@gmail.com?subject=我是一个有意思的人，希望和你一起做一番有意思的事！';">施工中……</div>
+<div id="resume" class="full full-height">
+    <div class="coderwall-div">
+        <script src="scripts/jquery.coderwall.js"></script>
+        <!-- CodeWall: https://coderwall.com/kxxoling -->
+        <section class="coderwall" data-coderwall-username="kxxoling" data-coderwall-orientation="horizonal"></section>
+    </div>
+
+    <div class="contact-root clear" ng-controller="resumeController">
+        <div class="mail">
+            <input id="mail-title" class="block mail" ng-model="mail.title">
+            <textarea id="mail-content" class="block mail" ng-model="mail.content"></textarea>
+            <div class="btns">
+                <a id="cancel" class="button floatLeft" ng-click="initMail()">重置</a>
+                <a id="submit-mail" class="button floatRight" target="_blank"
+                   ng-href="mailto:{{ profile.mail }}?subject={{ mail.title }}&body={{ mail.content }}"
+                   >发送</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="social">
+        <a id="google"></a>
+        <a id="github"></a>
+        <a id="wechat"></a>
+    </div>
+</div>

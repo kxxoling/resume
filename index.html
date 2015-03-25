@@ -14,20 +14,30 @@
         <link rel="stylesheet" href="styles/main.css">
         <link rel="stylesheet" href="styles/blue.css">
         <link rel="stylesheet" href="styles/github.css">
+        <link rel="stylesheet" href="styles/coderwall.css">
     </head>
 
-    <body data-gclp-initialized="true" data-gistbox-initialized="true" ng-app="app">
+    <body>
 
         <!-- begin .preloader -->
-        <div class="preloader" style="display: none;">
-            <div class="spinner"></div>
+        <div id="loader-wrapper">
+            <div class="preloader loading">
+                <span class="slice"></span>
+                <span class="slice"></span>
+                <span class="slice"></span>
+                <span class="slice"></span>
+                <span class="slice"></span>
+                <span class="slice"></span>
+            </div>
+
+            <div class="loader-section section-left"></div>
+            <div class="loader-section section-right"></div>
         </div>
-        <div class="preloader-left slide-left"></div>
-        <div class="preloader-right slide-right"></div>
         <!-- end preloader -->
 
         <!-- begin #main-container -->
-        <div id="main-container" ng-controller="resumeController">
+        <div id="main-container" ng-controller="resumeController" ng-cloak>
+            <a href="#/expand" class="close-icon {{ url=='/expand' && 'invisible' || '' }}"></a>
             <!-- begin #profile -->
             <div id="profile" class="profile profile-off">
                 <div class="main-content-profile">
@@ -49,16 +59,6 @@
                     <div class="social-container">
                         <!-- Google +1 按钮位置 -->
                         <div class="g-plusone" data-annotation="inline" data-width="300"></div>
-                        <!-- 需要紧邻最后一个 +1 按钮 -->
-                        <script type="text/javascript">
-                          window.___gcfg = {lang: 'zh-CN'};
-
-                          (function() {
-                            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-                            po.src = 'https://apis.google.com/js/platform.js';
-                            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-                          })();
-                        </script>
                     </div>
                 </div>
             </div>
@@ -74,16 +74,7 @@
 
         <!-- JavaScript Files -->
         <script src="scripts/jquery.min.js"></script>
-        <!--
-            <script src="scripts/prefixfree.min.js"></script>
-        -->
-        <script src="scripts/fastclick.js"></script>
         <script src="scripts/jquery.typer.js"></script>
-        <script src="scripts/masonry.pkgd.min.js"></script>
-        <script src="scripts/jquery.shuffle.min.js"></script>
-        <script src="scripts/morphext.min.js"></script>
-        <script src="scripts/smoothScrolls.js"></script>
-        <script src="scripts/owl.carousel.min.js"></script>
         <script src="scripts/angular.js"></script>
         <script src="scripts/angular-route.js"></script>
         <script src="scripts/main.js"></script>
