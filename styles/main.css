@@ -123,21 +123,6 @@ body {
     line-height: 4.8rem;
     padding-right: 7px;
 }
-
-.download {
-    padding: 15px 25px;
-    display: inline-block;
-    color: #bbb;
-    border: 1px solid #bbb;
-    transition: .2s all ease;
-    border-radius: 3px;
-}
-
-.download:hover {
-    text-decoration: none;
-    color: white;
-}
-
 .social-container {
     position: fixed;
     left: 50px;
@@ -587,20 +572,6 @@ textarea.mail, input.mail {
     padding-bottom: 12px;
 }
 
-.button {
-    width: 130px;
-    height: 40px;
-    line-height: 40px;
-    display: inline-block;
-    text-align: center;
-    cursor: pointer;
-    border-radius: 2px;
-}
-
-.button:hover {
-    text-decoration: none;
-}
-
 #cancel {
     color: #333;
     background: #f3f3f3;
@@ -657,3 +628,35 @@ textarea.mail, input.mail {
 .invisible {
     display: none;
 }
+
+.download {
+    padding: 3px 30px;
+    display: inline-block;
+    color: #bbb;
+    border: 1px solid #bbb;
+    transition: .2s all ease;
+    border-radius: 3px;
+}
+
+.download:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.button {
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 170px;
+    height: 40px;
+    line-height: 40px;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.button:hover {
+    text-decoration: none;
+}
+
