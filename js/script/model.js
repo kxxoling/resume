@@ -102,7 +102,7 @@ app.controller('resumeController', function ($scope, $location, $http) {
 
     $scope.profile = {
         name: '王然',
-        avatar: 'images/avatar.jpg',
+        avatar: '//avatars0.githubusercontent.com/u/1227139?v=3&s=160',
         sumarry: '这是简介',
         title: '不专注的前后端工程师',
         google: '',
