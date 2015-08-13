@@ -155,9 +155,13 @@
 
 
 .cube-ani {
-    width: 100%;
+    width: 220px;
     height: 220px;
     position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -110px 0 0 -110px;
     overflow: hidden
 }
 
