@@ -614,7 +614,7 @@ textarea.mail, input.mail {
     width: 60px;
     overflow: hidden;
     cursor: pointer;
-    background: url("../images/close.svg") no-repeat rgba(255,255,255,.5);
+    background: url("../../images/close.svg") no-repeat rgba(255,255,255,.5);
     opacity: .4;
     text-decoration: none;
     transition: .2s all ease;
