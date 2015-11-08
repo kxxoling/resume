@@ -15,6 +15,16 @@ app.controller('resumeController', function ($scope, $location, $http) {
     });
 
     workExp = [{
+        startTime: '2015-04',
+        stopTime: '2015-09',
+        company: '面包旅行',
+        title: 'Python 开发工程师',
+        text: '系统架构设计；Redis 数据迁移 DynamoDB；搭建测试框架。',
+        skillsets: [
+            ['Python', 70],
+            ['DynamoDB', 40],
+        ]
+    }, {
         startTime: '2014-07',
         stopTime: '2015-03',
         company: '北京天使汇',
@@ -24,15 +34,6 @@ app.controller('resumeController', function ($scope, $location, $http) {
             ['HTML&CSS', 40],
             ['Javascript', 70],
             ['Python', 80]
-        ]
-    }, {
-        startTime: '2014-06',
-        stopTime: '2014-07',
-        company: '上海远途',
-        title: 'Python 开发工程师',
-        text: '负责现有 Django 项目维护；基于 Mezzanine 定制 CMS 系统',
-        skillsets: [
-            ['Python', 50],
         ]
     }, {
         startTime: '2012-02',
@@ -78,14 +79,6 @@ app.controller('resumeController', function ($scope, $location, $http) {
             ['Javascript', 70],
             ['VB', 50],
             ['C#', 60]
-        ]
-    }, {
-        title: '各语言（微）博客',
-        text: '分别使用 Java/C#/Node.js/Python 开发过博客系统',
-        skillsets: [
-            ['HTML&CSS', 40],
-            ['Javascript', 70],
-            ['Python', 80]
         ]
     }];
 
